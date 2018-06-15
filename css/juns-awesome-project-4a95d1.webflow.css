@@ -1,0 +1,43 @@
+a {
+  text-decoration: underline;
+}
+
+.heading {
+  font-family: Lato, sans-serif;
+}
+
+.home-2 {
+  display: inline;
+  font-family: Lato, sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.link {
+  background-image: -webkit-linear-gradient(90deg, #50e3c2, #50e3c2 18%, #fff 20%);
+  background-image: linear-gradient(0deg, #50e3c2, #50e3c2 18%, #fff 20%);
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-image: -webkit-linear-gradient(90deg, #50e3c2, #50e3c2 48%, #fff 0);
+  background-image: linear-gradient(0deg, #50e3c2, #50e3c2 48%, #fff 0);
+  color: #333;
+}
+
+.homepage {
+  padding-top: 10%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.body {
+  -webkit-transition: background-color 658ms ease, -webkit-transform 400ms ease;
+  transition: background-color 658ms ease, -webkit-transform 400ms ease;
+  transition: transform 400ms ease, background-color 658ms ease;
+  transition: transform 400ms ease, background-color 658ms ease, -webkit-transform 400ms ease;
+}
