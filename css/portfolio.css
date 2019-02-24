@@ -1,53 +1,118 @@
 a {
-  text-decoration: underline;
+  color: #535353;
 }
 
-.heading {
-  font-family: Lato, sans-serif;
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: #078a5c;
 }
 
-.home-2 {
-  display: inline;
+p {
   font-family: Lato, sans-serif;
-  color: #333;
-  font-size: 1.2rem;
-  line-height: 40px;
+  font-family: myriad-pro, sans-serif;
+  color: #535353;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
   font-weight: 300;
 }
 
+.sub {
+  color: #CACACA;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-left:15px;
+  margin-bottom:5rem;
+}
+
+.headline {
+  font-family: Lato, sans-serif;
+  font-family: myriad-pro, sans-serif;
+
+  font-size: 4rem;
+  font-weight: 300;
+  line-height:5.4rem;
+  color: #535353;
+  margin-bottom: 10rem;
+  padding: 0 15px;
+}
+
+.title {
+  color: #535353;
+  font-family: Lato, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.projecttext {
+  margin-bottom: 2rem;
+}
+
+.description {
+  display: inline;
+  font-family: Lato, sans-serif;
+  color: #535353;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+
+.homepage_img {
+  width: 100%;
+}
+
+.special {
+  font-family: big-caslon-fb, serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+
 .link {
-  border-bottom: 4px solid #50e3c2;
-  box-shadow: inset 0 -20px 0 0 rgba(80, 227, 194, .3);
-  -webkit-transition: background-color 300ms ease;
-  transition: background-color 300ms ease;
+  color: #23AA7B;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
   text-decoration: none;
 }
 
-.link:hover {
-  color: #333;
-}
-
-.link.hp-link {
-  box-shadow: none;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
-}
-
-.link.hp-link:hover {
+a.link:hover {
   box-shadow: inset 0 -24px 0 0 rgba(80, 227, 194, .3);
+}
+
+
+.readmore {
+  font-size: 2rem;
+}
+
+a:hover .readmore {
+  box-shadow: inset 0 -24px 0 0 rgba(80, 227, 194, .3);
+}
+
+.footerlink {
+  margin:0 5%;
 }
 
 .homepage {
   padding-top: 10%;
-  padding-right: 30px;
-  padding-left: 30px;
 }
 
-.body {
-  -webkit-transition: background-color 658ms ease, -webkit-transform 400ms ease;
-  transition: background-color 658ms ease, -webkit-transform 400ms ease;
-  transition: transform 400ms ease, background-color 658ms ease;
-  transition: transform 400ms ease, background-color 658ms ease, -webkit-transform 400ms ease;
+footer {
+  padding: 5rem 0;
+  margin-top: 20rem;
 }
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: 6rem;
+    line-height: 8rem;
+    margin-bottom: 20rem;
+  }
+
+  .readmore {
+    font-size: 2.5rem;
+  }
+}
+
+
+
