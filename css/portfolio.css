@@ -8,7 +8,6 @@ a:hover, a:focus, a:active {
 }
 
 p {
-  font-family: Lato, sans-serif;
   font-family: myriad-pro, sans-serif;
   color: #535353;
   font-size: 1.75rem;
@@ -25,9 +24,7 @@ p {
 }
 
 .headline {
-  font-family: Lato, sans-serif;
   font-family: myriad-pro, sans-serif;
-
   font-size: 4rem;
   font-weight: 300;
   line-height:5.4rem;
@@ -38,7 +35,7 @@ p {
 
 .title {
   color: #535353;
-  font-family: Lato, sans-serif;
+  font-family: myriad-pro, sans-serif;
   font-size: 3rem;
   font-weight: 300;
   margin-bottom: 3rem;
@@ -50,7 +47,7 @@ p {
 
 .description {
   display: inline;
-  font-family: Lato, sans-serif;
+  font-family: myriad-pro, sans-serif;
   color: #535353;
   font-size: 1.75rem;
   line-height: 2.5rem;
