@@ -102,6 +102,10 @@ a:hover .readmore {
   padding-top: 15%;
 }
 
+.notdesign-box {
+  overflow: visible;
+}
+
 .notdesign {
   width: 110%;
   margin-top: 40px;
