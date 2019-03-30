@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="287px" height="187px" viewBox="0 0 287 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <polygon id="Line-3-Copy" stroke="#535353" stroke-width="0.5" stroke-linecap="square" transform="translate(79.500000, 89.681667) rotate(-125.000000) translate(-79.500000, -89.681667) " points="119 158.181667 40 158.181667 40 21.1816667 119 21.1816667"></polygon>
+            <polygon id="Line-3-Copy-2" stroke="#535353" stroke-width="0.5" fill="#FFFFFF" stroke-linecap="square" transform="translate(92.976071, 37.238261) rotate(-125.000000) translate(-92.976071, -37.238261) " points="101.476071 53.7382607 84.4760713 53.7382607 84.4760713 20.7382607 101.476071 20.7382607"></polygon>
+            <path d="M82.4515938,116.493659 C82.2000944,102.493659 82.4515938,92.1995412 82.4515938,74.4936588 C70.853614,74.4936588 61.4515938,83.8956791 61.4515938,95.4936588 C61.4515938,107.091639 70.853614,116.493659 82.4515938,116.493659 Z" id="Oval-Copy" fill="#7EFED1" transform="translate(71.951594, 95.493659) rotate(-35.000000) translate(-71.951594, -95.493659) "></path>
+            <path d="M124.798694,69.2803835 C143.024091,69.2803835 157.798694,54.5057803 157.798694,36.2803835 C157.798694,18.0549868 143.024091,3.28038355 124.798694,3.28038355 C124.798694,18.0549868 124.798694,46.0911944 124.798694,69.2803835 Z" id="Oval-Copy-20" stroke="#535353" stroke-width="0.5" transform="translate(141.298694, 36.280384) rotate(14.000000) translate(-141.298694, -36.280384) "></path>
+            <circle id="Oval" stroke="#535353" stroke-width="0.5" cx="79.8053922" cy="89.7689133" r="25.5"></circle>
+        </g>
+        <g id="Group-3" transform="translate(121.000000, 81.000000)">
+            <rect id="Rectangle" stroke="#535353" stroke-width="0.5" x="0.25" y="11.25" width="165.5" height="94.5"></rect>
+            <rect id="Rectangle" fill="#7EFED1" x="24" y="50" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy" fill="#7EFED1" x="31" y="24" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-2" fill="#7EFED1" x="102" y="21" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-13" fill="#7EFED1" x="129" y="15" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-14" fill="#7EFED1" x="143" y="15" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-3" fill="#7EFED1" x="109" y="50" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-4" fill="#7EFED1" x="54" y="20" width="3" height="42"></rect>
+            <rect id="Rectangle-Copy-5" fill="#7EFED1" x="61" y="0" width="3" height="42"></rect>
+            <g id="Group" transform="translate(11.000000, 21.000000)" fill="#E3E3E3">
+                <rect id="Rectangle-Copy-6" x="58.1875" y="0" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-7" x="0" y="20.15" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-8" x="30.625" y="20.15" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-9" x="73.5" y="20.15" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-10" x="105.65625" y="20.15" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-11" x="120.96875" y="20.15" width="10.71875" height="41.85"></rect>
+                <rect id="Rectangle-Copy-12" x="136.28125" y="20.15" width="10.71875" height="41.85"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
