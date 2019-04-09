@@ -45,7 +45,7 @@ p {
   margin-bottom: 2rem;
 }
 
-.description {
+.description, .footer-email{
   display: inline;
   font-family: myriad-pro, sans-serif;
   color: #535353;
@@ -94,8 +94,26 @@ a:hover .readmore {
   margin-bottom: 10rem;
 }
 
-.footerlink {
-  margin:0 5%;
+.footer-email {
+  margin-bottom: 3rem;
+}
+
+.footer-about {
+  font-size: 1.6rem;
+  color: #868686;
+  line-height: 2rem;
+}
+
+.love {
+  -webkit-animation: love 1.414s infinite ease-in-out;
+  animation: love 1.414s infinite ease-in-out;
+  height: 11.312px;
+  width: 16px;
+}
+
+.copyright {
+  font-size: 1.6rem;
+  color: #CACACA;
 }
 
 .homepage {
@@ -136,7 +154,3 @@ footer {
     margin-left: 0;
   }
 }
-
-
-
-
