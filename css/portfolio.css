@@ -33,6 +33,10 @@ p {
   padding: 0 15px;
 }
 
+.headline-art {
+   font-size: 8rem;
+}
+
 .title {
   color: #535353;
   font-family: myriad-pro, sans-serif;
@@ -136,6 +140,10 @@ footer {
     font-size: 6rem;
     line-height: 8rem;
     margin-bottom: 16rem;
+  }
+
+  .headline-art {
+    font-size: 12rem;
   }
 
   .readmore {
