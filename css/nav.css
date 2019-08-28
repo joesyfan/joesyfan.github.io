@@ -3,7 +3,7 @@ body
   margin: 0;
   padding: 0;
   background: #fff;
-  font-family: "Lato",sans-serif;
+  font-family: "poppins",sans-serif;
   overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
 }
 
@@ -48,7 +48,7 @@ body
     height: 3px;
     margin-bottom: 5px;
     position: relative;
-    background: #25BA86;
+    background: #5364FF;
     border-radius: 50px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -108,7 +108,7 @@ body
     padding-top: 10rem;
     left: 0px;
     top: 0px;
-    background: #F9FFFD;
+    background: #FFFFFF;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
@@ -119,7 +119,7 @@ body
 }
 
 #menu li {
-  font-weight:800;
+  font-weight:600;
   font-size: 4rem;
   line-height: 6rem;
   width:auto;
@@ -128,7 +128,7 @@ body
 
 #menu a li:hover, a li:active, a li:focus {
   padding-left: 10px;
-  color: #25BA86;
+  color: #2C41FF;
   -webkit-transition: all 100ms ease, -webkit-transform 100ms ease;
   transition: all 100ms ease-in;
   box-shadow:none;
