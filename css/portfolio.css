@@ -14,9 +14,30 @@ a:hover, a:focus, a:active {
 p {
   font-family: poppins, sans-serif;
   color: #616161;
-  font-size: 1.7rem;
-  line-height: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   font-weight: 300;
+}
+
+.logo {
+  height: 40px;
+  display: inline-block;
+  margin: 3rem 1rem 3rem 3rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.navlink {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  font-weight: 200;
+}
+
+a.navlinklogo:hover {
+  box-shadow: none;
+  opacity: 0.7;
 }
 
 .lighten {
@@ -140,7 +161,7 @@ a.link:hover {
 }
 
 .homepage {
-  padding-top: 15%;
+  padding-top: 5%;
 }
 
 .notdesign-box {
@@ -159,7 +180,8 @@ footer {
 
 @media (min-width: 768px) {
   p {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 
   .headline {
