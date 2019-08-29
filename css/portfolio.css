@@ -22,7 +22,7 @@ p {
 .logo {
   height: 40px;
   display: inline-block;
-  margin: 3rem 1rem 3rem 3rem;
+  margin: 1rem
 }
 
 .logo img {
@@ -33,6 +33,10 @@ p {
   font-size: 1.6rem;
   letter-spacing: 3px;
   font-weight: 200;
+}
+
+.navbar {
+  padding: 2rem;
 }
 
 a.navlinklogo:hover {
