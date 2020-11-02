@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jun Fan</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/azc4rbi.css">
+    <link href="css/love.css" rel="stylesheet" type="text/css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <link href="css/portfolio.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="img/icon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="img/icon.png" rel="apple-touch-icon">
+</head>
+<body>
+    <header class="header">
+        <nav role='navigation' class="navbar">
+            <div class="back">
+                <a href="index.html" class="navlinklogo">
+                    <img src="img/back.svg">
+                </a>
+            </div>    
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu" class="">
+                <div class="row">
+                  <div class="col-sm-4 col-sm-offset-4">
+                    <a href="index.html"><li>Design</li></a>
+                    <a href="art.html"><li>Art</li></a>
+                    <a href="about.html"><li>About</li></a>
+                  </div>
+                </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row section">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1 class="headline headline-pj">
+                    Pitchfork on Twitter
+                </h1>
+                <h3 class="lighten">
+                    A glimpse of the indie music world on social media
+                </h3>                
+                <div class="">
+                    <a href="visualization.html" target="_blank"><img class="homepage_img" src="img/project_pitchfork/image4.gif" loop=infinite /></a>
+                </div>
+                <p> 
+                    This research project explores Pitchfork's reviewer scores of 21447 indie music albums in the past ten years and around 3200 official tweets using Python, Tableau and D3 plus. The project was done in 2016. <a href="visualization.html" target="_blank">View the interactive network map ›</a>
+                    <br>
+                </p>
+                <p>
+                    <br>
+                    <b>Type:</b> solo project
+                    <br>
+                    <b>Duration:</b> 4 weeks
+                    <br>
+                    <b>Tasks:</b> data mining, data visualization
+                </p>
+                <p> <br>
+                    Who are the most popular mentioned-users and artists on Pitchfork's official twitter account? Are these artists also Pitchforks’ favorites? Do Pitchfork fans' social media presence and music opinions really get affected by this tiny web outfit? Apart from answering these questions, I also visualized Pitchfork's twitter network, which demonstrates how the artists, record labels, music festivals, and even politicians get connected together in this online indie music world.
+                    <br>
+                </p>
+                <br>
+                <br>
+                <h2 class="title">Data sets</h2>
+                <h3>#1 Pitchfork's reviewer scores</h3>
+                <p>As the most influential tastemaker on the music scene, Pitchfork offers a valuable dataset that demonstrates the indie music trends from the perspective of a professional critic. I came across Neal S. Grantham's Pitchfork album scores and accolade dataset on Github. In Neal's analysis, he did a good job demonstrating Pitchfork’s scoring system, and being skeptical about its reviewers. Discussing reviewers’ authenticity is one angle of measuring the website; finding out what its users are talking about is an equally interesting and meaningful way to review the indie music world. So I decided to put it together with social media and find out more from it.
+                <br><br>
+                I used the “Albums” table in Neal's dataset, which includes album’s id (unique album identifier assigned by Pitchfork), name of the album, name of the album’s artist, name of the label that produced the album, year the album was released, name of the album’s Pitchfork reviewer, score given to the album by reviewers (0.0 to 10.0 in increments of 0.1), accolade (“Best New Music” or “Best New Reissue”), review published date, and URL of Pitchfork’s review. 21447 albums are described in the dataset, and the file is updated to Jan. 16, 2016.
+                <br><br>
+                Based on the dataset, I created an artist dictionary by assigning albums’ information to each artist. And then I calculated the mean value of all the album scores received by each artist.</p>
+                <br>
+                <br>
+                <h3>#2 Tweets published on Pitchfork’s Twitter official account</h3>
+                <p>Using Twitter’s Rest API, I grabbed tweets’ profiles from Pitchfork’s twitter timeline on 162 pages. There are around 3200 tweets in all, dated from March 3, 2016 to May 26, 2016. Each tweet’s profile includes the tweet’s id, text, mentioned-users, retweet-number, and favorite-number. I add numbers of favorited and retweet together as an engagement score for every tweet.</p>
+                <br><br>
+                <h2 class="title">Handling the data</h2>
+                <h3>#1 Scrape the data</h3><br>
+                <p>I cleaned the data in both datasets by lowercasing all the names and striping the blank spaces and “the”. However, while having a “cleaner” name, I still keep artist’s original name for future references in pitchfork score dictionary. That is because I noticed that one artist’s name was simply disappeared after striping since the band is called “The The”. And then I further stripped the “.com” and “official” in tweet dataset.</p>
+                <br>
+                <h3>#2 Match the two datasets; iterate scraping</h3><br>
+                <p>I cleaned the data in both datasets by lowercasing all the names and striping the blank spaces and “the”. However, while having a “cleaner” name, I still keep artist’s original name for future references in pitchfork score dictionary. That is because I noticed that one artist’s name was simply disappeared after striping since the band is called “The The”. And then I further stripped the “.com” and “official” in tweet dataset.</p>
+                <br><br>
+                <h2 class="title">Visualization and analysis</h2>
+                <br>
+                <h3>Who are the most popular mentioned users on Pitchfork’s twitter?</h3>
+                <br>
+                <img src="img/project_pitchfork/image3.png" class="homepage_img">
+                <h5>Figure 1: Word cloud - Top 50 popular mentioned users by Pitchfork on Twitter (Sizes of the names are measured by Twitter Engagement Score)</h5>
+                <br><br>
+                <p>The top five most-mentioned users by Pitchfork twitter are Radiohead, Lil Chano from from 79th, The Weeknd, Kanye West and Kendrick Lamar. All of them are artists – only Radiohead is a rock band, and the other four are all R&B/Hip Hop artists or projects. In addition, all of them have just released new singles or albums, and are currently on tour during the period this project was conducted.
+                <br>
+                <br>
+                Another notable fact is that Bernie Sanders ranks 8th biggest. In fact, he is also the only one among the top ten mentioned users who is not an artist.
+                <br>
+                <br>
+                <h3>Who are the most popular artists on Pitchfork’s twitter?</h3>
+                <br>
+                <img src="img/project_pitchfork/image9.png" class="homepage_img">
+                <br><h5>Figure 2: Word cloud - Top 50 popular artists mentioned by Pitchfork on Twitter (Sizes of the names are measures by Twitter Engagement Score)</h5>
+                <br>
+                <p>Looking at the biggest names in this cloud, the top popular artists almost remain the same as in Figure 1. However, when we zoom in and have a glance at those smaller but extremely familiar names: Bob Dylan, The Beatles, Paul McCartney, Bruce Springsteen, Ramones… It’s impressive to see these old big names still exist in the top 50 most popular artists in 2016. Undoubtedly they cannot compete with these new artists who get along really well with social media, I would say they are truly revered artists, all aged over 70 (Paul McCartney could somehow represent The Beatles), and they devote their whole life to music - they are still on tour, playing their remarkable music for the world, and getting noticed on social media.</p>
+                <br>
+                <br>
+                <h3>Do these most popular artists on twitter also get higher scores from Pitchfork?</h3>
+                <br>
+                <img src="img/project_pitchfork/image14.png" class="homepage_img">
+                <br><h5>Figure 3: Pitchfork score VS Twitter engagement score of 309 artists (X-Axis: Twitter engagement score, Y-Axis: Pitchfork score)</h5>
+                <br><p>Apparently, Radiohead stays at the right-most side of the graph with an engagement score of more than 45K, but its average Pitchfork score is under 8. So does The Weeknd. However, most artists are not as lucky as Radiohead and The Weeknd – they only have under 2.5K engagement, while their pitchfork score can still get as high as 10 or as low as under 3. Most of them cluster between 6-9 (according to Neal, the mean score of all the Pitchfork albums is 6.95, which seems reasonable from this graph). In order to get a better understanding of the artists with twitter engagement under 2.5K, I then took logarithm of the X-Axis.</p>
+                <br><br>
+                <img src="img/project_pitchfork/image5.png" class="homepage_img">
+                <br><h5>Figure 4: Pitchfork score VS Twitter engagement score of 309 artists (X-Axis: Twitter engagement score on Log scale, Y-Axis: Pitchfork score)</h5>
+                <br>
+                <p>Now we can have a better understanding of an artists’ social media popularity and its Pitchfork score. I tried to find a trend line of correlation from this graph, but failed. It seems like the popularity of an artist on social media does not have much to do with professional reviewers’ opinions (Pitchfork scores). My previous hypothesis of the correlation between Pitchfork’s opinion and Twitter popularity was wrong.</p>
+                <br><br>
+                <h3>What does Pitchfork’s twitter network look like?</h3>
+                <p>#1 Degree distribution</p>
+                <img src="img/project_pitchfork/image11.png" class="homepage_img">
+                <br><h5>Figure 5: Network degree distribution</h5>
+                <br><p>I examined the degree distribution of Pitchfork's Twitter network by counting the number of connections each mentioned user has to others. In figure 5, the abrupt curve demonstrates that much less users are being mentioned frequently with others, and most users are being mentioned with others under 6 times. However, the curve becomes even when users are being mentioned more than 40 times, meaning that when frequency reaches around 40, the number of those few popular users no longer getting affected by the connection degree.</p>
+                <br><br><p>#2 Do users having higher connection degree also get higher Twitter engagement scores?</p>
+                <br>
+                <img src="img/project_pitchfork/image12.png" class="homepage_img">
+                <br><h5>Figure 6: Twitter Engagement VS Connection Degree of 1075 users (X-Axis: Connection degree on Log scale; Y-Axis: Engagement score on Log scale; spots are labeled by mentioned-users' names)</h5>
+                <br><p>Yes. In figure 6, the correlation between engagement score and connection degree is obvious when both axes are on log scale. The correlation coefficient is as high as 0.66. Now we can conclude that mentioned users who has higher connection degree can normally get higher Twitter engagement scores. Thus, here's a tip for artists: let Pitchfork mention you with others frequently, so that you will be more popular on Twitter! On the other hand, Pitchfork can really manipulate audience preferences on social media, not through reviewers’ scores, but instead, mentioning artists more or less with others on Twitter can also make a difference.</p>
+                <br><br>
+                <p>#3 The network (Click <a ref="visualization.html">here</a> to view the site)</p>
+                <img src="img/project_pitchfork/image6.png" class="homepage_img">
+                <br><h5>Figure 7: Overview of Pitchfork's Twitter network map</h5>
+                <br>
+                <p>Most mentioned users in the center are connected tightly together as a giant component. Others are scattered sporadically around the giant component. There’s no doubt that the most centered and connected ones are still those big names, but it’s still interesting to zoom in and see whom they are getting connected.</p>
+                <br><br>
+                <img src="img/project_pitchfork/image10.png" class="homepage_img">
+                <br><h5>Figure 8: Radiohead's connections on Pitchfork's Twitter</h5>
+                <br><img src="img/project_pitchfork/image13.png" class="homepage_img">
+                <br><h5>Figure 9: Kanye West's connections on Pitchfork's Twitter</h5>
+                <br><img src="img/project_pitchfork/image7.png" class="homepage_img" class="homepage_img">
+                <br><h5>Figure 10: Bernie Sanders's connections on Pitchfork's Twitter</h5>
+                <br>
+                <p>It’s interesting to find out how tightly Bernie Sanders, a politician, is connected to the indie music world. In fact, all the artists connected with Bernie Sanders are who endorsed him. No wonder why he ranks so high in the Figure 1 that even exceeds most artists. Then I found an article on WIRE named “Bernie Sanders’ NYC Campaign Is Like Pitchfork Come to Life”. Here’s a quote: “Sanders’ campaign is like the Pitchfork homepage come to life, filled not with giant stars like Katy Perry or Beyoncé (They’re #withher), but with artists who some might say are outsiders to the musical establishment.”</p>
+                <br><img src="img/project_pitchfork/image2.png" class="homepage_img">
+                <br><p>Put aside Bernie Sanders’s political affiliation, just like Bernie in the presidential election in 2016, Pitchfork is also an “outsider” to some extent in the whole music establishment. Giant pop stars like Katy Perry can never be Pitchfork’s favorite. Pitchfork’s taste is more independent, more subcultural, and often with more personalities. And this is what makes Pitchfork unique but still kind of “outside” of the music world.
+                <br><br>
+                Now I am curious about how much Bernie Sanders and Pitchforks’ core audience overlaps. However, this is another research topic to dig into.
+                <br>
+                <br>
+                <h2 class="title">Limitations</h2>
+                <br>
+                <h3>Biased Pitchfork scores</h3>
+                <br>
+                <p>I consider assigning each artist a mean value of all their scores the biggest limitation, when I measure the correlation between Twitter engagement and Pitchfork scores. For example, Radiohead has 14 albums reviewed and scored on Pitchfork. 2 of them are labeled as “Best New Album”; 4 of them are labeled as “Best New Reissue”, including a first ever full score (10.0) in Pitchfork’s history. According to these records, Radiohead can be listed among Pitchfork’s favorite bands. Nevertheless, its mean score is only 7.66. On the other hand, the band The Stone Roses who has a 10.0 as its final mean score because it is only reviewed by Pitchfork once. It would be more accurate to measure Pitchfork’s opinion if I include accolades in the Pitchfork dataset.</p>
+                <br><br>
+                <h3>Timeliness of the tweets</h3>
+                <br>
+                <p>The project only measures the tweets from Pitchfork’s timeline in the latest three months in 2016, so the Twitter scores heavily depends on timeliness. Because artists who are releasing new albums and on tours are undoubtedly getting more attentions than those who are not. On the other hand, it’s also interesting to see those president candidates in the data due to the timeliness.</p>
+                <br><br>
+                <h3>Strength of connections in Twitter network</h3>
+                <br>
+                <p>The connections in the social network map are ranked randomly instead of ranked by the strength of each connection. And some names appear several times in the right bar - this is the exact times they get mentioned together. I should have merged these duplicated names and count them as strength of each connection.</p>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container text-center">
+            <p class="title">
+                ✨ Say hi ✨
+                <br>
+                <a href="mailto:junfande@gmail.com" class="link">junfande@gmail.com</a>
+            </p>
+            <p class="footer-about">This site is designed and hand-coded by me with <img src="img/icon/heart.svg" class="love"><br>Always work in progress</p>
+            <p class="copyright">2020 © Jun Fan</p>
+        </div>
+    </footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137965282-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137965282-1');
+</script>
+</body>
+</html>
